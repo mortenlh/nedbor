@@ -1764,3 +1764,4 @@ vendor/theseer/tokenizer/src/TokenCollectionException.php
 vendor/theseer/tokenizer/src/Tokenizer.php
 vendor/theseer/tokenizer/src/XMLSerializer.php
 vendor/myclabs/deep-copy/composer.json
+.vscode/settings.json
