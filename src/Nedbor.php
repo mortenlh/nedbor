@@ -330,7 +330,7 @@ class Nedbor
             }
         }
         $nedborSVG->setMonthMeanSum($this->monthMean);
-        $linkfile = $this->path . 'sumgraph.svg';
+        $linkfile = $this->getPath() . 'sumgraph.svg';
         $nedborSVG->saveToFile($linkfile);
         return $linkfile;
     }
