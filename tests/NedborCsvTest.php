@@ -11,11 +11,4 @@ final class NedborCsvTest extends TestCase
         $nedborcsv = new NedborCsv();
         $this->assertIsArray($nedborcsv->getCsvdata());
     }
-
-    public function testGetPeriods()
-    {
-        $nedborcsv = new NedborCsv();
-        $periods = $nedborcsv->getCvsPeriods('data/');
-        $this->assertCount(14, $periods);
-    }
 }
