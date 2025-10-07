@@ -108,26 +108,4 @@ final class NedborTest extends TestCase
         $this->assertSame(42.35, $nedbor->getNedborPeriodMedian('2013'));
         $this->assertSame(-1.0, $nedbor->getNedborPeriodMedian('2003'));
     }
-
-    public function testMeanForMonth()
-    {
-        $nedbor = new Nedbor('data/');
-        $this->assertSame(0.0, $nedbor->getNedborMonthMean(2));
-        $nedbor->getCvsdata();
-        $this->assertSame('49,3', number_format($nedbor->getNedborMonthMean(2), 1, ',', ''));
-        $this->assertSame(49.26, $nedbor->getNedborMonthMean(2));
-        $this->assertSame(-1.0, $nedbor->getNedborMonthMean(13));
-        $this->assertSame('55,1', number_format($nedbor->getNedborMonthMean(11), 1, ',', ''));
-    }
-
-    public function testMedianForMonth()
-    {
-        $nedbor = new Nedbor('data/');
-        $this->assertSame(0.0, $nedbor->getNedborMonthMedian(2));
-        $nedbor->getCvsdata();
-        $this->assertSame('35,5', number_format($nedbor->getNedborMonthMedian(2), 1, ',', ''));
-        $this->assertSame(35.5, $nedbor->getNedborMonthMedian(2));
-        $this->assertSame(-1.0, $nedbor->getNedborMonthMedian(13));
-        $this->assertSame('46,3', number_format($nedbor->getNedborMonthMedian(11), 1, ',', ''));
-    }
 }

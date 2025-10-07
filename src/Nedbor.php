@@ -81,9 +81,11 @@ class Nedbor
                 $this->totalnedbor[$key] = $this->sumnedbor[$key][count($data) - 1];
             }
         }
-        for ($i = 0; $i < count($this->nedbordata['Måned']); $i++) {
-            $mean = $this->getNedborMonthMean($i + 1);
-            $this->monthMean[] = $mean;
+        if (count($this->periods) > 0) {
+            for ($i = 0; $i < count($this->nedbordata['Måned']); $i++) {
+                $mean = $this->getNedborMonthMean($i + 1);
+                $this->monthMean[] = $mean;
+            }
         }
     }
 
